@@ -8,14 +8,14 @@ pipeline {
             }
         }
 
-        stage('Install Dependencies') {
-            steps {
-                bat '''
-                    python -m venv .venv
-                    .venv\\Scripts\\python.exe -m pip install -r requirements.txt
-                '''
-            }
-        }
+      stage('Install Dependencies') {
+    steps {
+        bat '''
+            python -m venv .venv
+            .venv\\Scripts\\python.exe -m pip install -r requirements.txt
+        '''
+    }
+}
 
         stage('Test') {
             steps {

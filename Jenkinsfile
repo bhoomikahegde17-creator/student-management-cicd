@@ -8,10 +8,10 @@ pipeline {
             }
         }
 
-      stage('Install Dependencies') {
+    stage('Install Dependencies') {
     steps {
         bat '''
-            python -m venv .venv
+            "C:\\Users\\bhoom\\AppData\\Local\\Programs\\Python\\Python314\\python.exe" -m venv .venv
             .venv\\Scripts\\python.exe -m pip install -r requirements.txt
         '''
     }
